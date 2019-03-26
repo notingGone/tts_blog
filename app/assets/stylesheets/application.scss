@@ -16,12 +16,11 @@
 @import 'bootstrap';
 @import 'bootstrap-sprockets';
 
-.panel-body {
+.post-panel-body {
   overflow: scroll;
   text-overflow: ellipsis;
   word-wrap: break-word;
   height: 300px;
-
 }
 
 .avatar {
@@ -80,7 +79,18 @@
 }
 
 .panel-footer {
-  height: 84px;
+  align-items: center;
+  .signup-footer {
+    display: flex;
+  }
+  .post-footer {
+    height: 84px;
+  }
+}
+
+.signup-panel {
+  height: 450px;
+  width: 300px;
 }
 
 .comment {
@@ -90,4 +100,8 @@
 a:link, a:visited {
   color: white;
 
+}
+
+.btn-nav {
+  margin: 10px;
 }

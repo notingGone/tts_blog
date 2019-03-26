@@ -12,7 +12,7 @@
           <div class="panel-heading">
             <div class="post-title"><%= post.title %></div>
           </div>
-          <div class="panel-body">
+          <div class="panel-body post-panel-body">
             <% if post.user.avatar.url.nil? %>
               <%= image_tag 'default-avatar.jpg', class: "avatar" %>
             <% else %>
@@ -25,7 +25,7 @@
               <%= post.blog_entry %>
             </div>
           </div>
-          <div class="panel-footer">
+          <div class="panel-footer post-footer">
             <div class="btn-group" role="group">
                 <%= link_to 'Show', post, type: 'button', class: 'btn btn-primary' %>
                 <%= link_to 'Edit', edit_post_path(post), type: 'button', class: 'btn btn-warning' %>
@@ -46,4 +46,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path, class: "btn btn-success" %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-nav btn-success" %>

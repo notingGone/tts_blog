@@ -6,10 +6,10 @@
 
         <div class="panel panel-info">
           <div class="panel-heading">
-            <h2>Sign up</h2>
+            <div class="post-title">Sign up</div>
           </div>
 
-          <div class="panel-body">
+          <div class="panel-body signup-panel">
             <div class="form-group">
               <%= f.label :email %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -39,11 +39,11 @@
             </div>
 
             <div class="actions">
-              <%= f.submit "Sign up", class: "btn btn-success" %>
+              <%= f.submit "Sign up", class: "btn btn-nav btn-success" %>
             </div>
           </div>
 
-          <div class="panel-footer">
+          <div class="panel-footer signup-footer">
             <%= render "devise/shared/links" %>
           </div>
         </div>
