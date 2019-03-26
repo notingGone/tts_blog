@@ -17,7 +17,11 @@
 @import 'bootstrap-sprockets';
 
 .panel-body {
+  overflow: scroll;
+  text-overflow: ellipsis;
   word-wrap: break-word;
+  height: 300px;
+
 }
 
 .avatar {

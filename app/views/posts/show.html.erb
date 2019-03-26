@@ -6,7 +6,11 @@
         <h3 class="post-title"><%= @post.title %></h3>
       </div>
       <div class="panel-body">
-        <p><%= image_tag @post.user.avatar.url, class: "avatar" %>
+        <% if @post.user.avatar.url.nil? %>
+          <p><%= image_tag 'default-avatar.jpg', class: "avatar" %>
+        <% else %>
+          <p><%= image_tag @post.user.avatar.url, class: "avatar" %>
+        <% end %>
         By <%= @post.user.username %></p><br>
         <p class="post-content"><%= @post.blog_entry %></p>
       </div>
