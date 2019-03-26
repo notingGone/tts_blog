@@ -18,8 +18,8 @@
         <%= link_to 'Edit', edit_post_path(@post), type: 'button', class: 'btn btn-warning' %>
         <div class="timestamp">
           posted on <%= @post.created_at.strftime("%F, around %l:%M%P") %>
-          <% if @post.created_at == @post.updated_at %>
-          <br>edited on <%= @post.updated_at.strftime("%F, around %l:%M%P") %>
+          <% if @post.created_at != @post.updated_at %>
+            <br>edited on <%= @post.updated_at.strftime("%F, around %l:%M%P") %>
           <% end %>
         </div>
       </div>
