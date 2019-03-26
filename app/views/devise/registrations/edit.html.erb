@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-  <h1>Edit <%= @user.username %>'s profile</h1>
+  <h1>Edit <%= current_user.username %>'s profile</h1>
 </div>
 <div class="container">
   <div class="row">
@@ -54,7 +54,7 @@
     </div>
     <div class="col-md-6"
       <div class="well">
-        <%= image_tag(@user.avatar.url, class: "img-responsive avatar-large") %>
+        <%= image_tag(current_user.avatar.url, class: "img-responsive avatar-large") %>
       </div>
     </div>
   </div>
