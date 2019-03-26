@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron text-center">
+  <h1>Latest Blog Posts</h1>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-sm-6">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="post-title"><%= post.title %></div>
+          </div>
+          <div class="panel-body">
+            <%= image_tag post.user.avatar.url, class: "avatar" %>
+            <div class="post-author">
+              By: <%= post.user.username %>
+            </div>
+            <div class="post-content">
+              <%= post.blog_entry %>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <div class="btn-group" role="group">
+                <%= link_to 'Show', post, type: 'button', class: 'btn btn-primary' %>
+                <%= link_to 'Edit', edit_post_path(post), type: 'button', class: 'btn btn-warning' %>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, type: 'button', class: 'btn btn-danger' %>
+            </div>
+            <div class="timestamp">
+              posted on <%= post.created_at.strftime("%F, around %l:%M%P") %>
+              <% if post.created_at == post.updated_at %>
+              <br>edited on <%= post.updated_at.strftime("%F, around %l:%M%P") %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
