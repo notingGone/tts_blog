@@ -9,6 +9,8 @@ Bundler.require(*Rails.groups)
 module Blog
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.time_zone = 'Eastern Time (US & Canada)'
+    config.active_record.default_timezone = :local # Or :utc
     config.load_defaults 5.2
     config.autoload_paths += %W(#{config.root}/app/uploaders)
     # config.time_zone = 'Eastern Time (US & Canada)'
