@@ -32,6 +32,11 @@
       <ul class="list-group">
         <% @post.comments.each do |comment| %>
           <li class="list-group-item">
+            <% if current_user.avatar.blank? == false %>
+              <%= image_tag comment.user.avatar.url, class: "avatar-mini" %>
+            <% else %>
+              <%= image_tag 'default-avatar.jpg', class: "avatar-mini" %>
+            <% end %>
             <strong><%= comment.user.username %></strong> commented:<br>
             <div class="comment"><%= comment.comment_entry %></div>
             <div class="timestamp">
