@@ -16,11 +16,20 @@
 @import 'bootstrap';
 @import 'bootstrap-sprockets';
 
+body {
+  padding-top: 45px;
+ }
+
 .post-panel-body {
   overflow: scroll;
   text-overflow: ellipsis;
   word-wrap: break-word;
   height: 300px;
+}
+
+.username-dropdown {
+  font-size: 1.15em;
+  font-weight: bold;
 }
 
 .avatar {
@@ -37,7 +46,7 @@
   border-style: solid;
   border-width: 1;
   border-color: blue;
-  height: 33px;
+  height: 25px;
   display: inline;
 }
 

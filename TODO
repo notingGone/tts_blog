@@ -15,7 +15,10 @@ sign_up needs a confirmation page/message
 (also, needs email confirmation process)
 
 avatars are breaking for users who are not logged in?
+/added before a certain migration?
 
 make navbar
 
 make footer
+
+tidy up posts#new
