@@ -1,0 +1,15 @@
+any user can edit any post
+which changes post.user to whoever edited it
+
+comments can be blank
+
+post can be blank
+
+title can be blank
+
+any user can destroy any post
+
+sign_up needs a confirmation page/message
+(also, needs email confirmation process)
+
+avatars are breaking for users who are not logged in?
