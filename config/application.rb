@@ -13,7 +13,6 @@ module Blog
     config.active_record.default_timezone = :local # Or :utc
     config.load_defaults 5.2
     config.autoload_paths += %W(#{config.root}/app/uploaders)
-    # config.time_zone = 'Eastern Time (US & Canada)'
     # config.active_record.default_timezone = 'Eastern Time (US & Canada)'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

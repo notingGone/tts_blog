@@ -12,7 +12,12 @@
           <p><%= image_tag @post.user.avatar.url, class: "avatar" %>
         <% end %>
         By <%= @post.user.username %></p><br>
-        <p class="post-content"><%= @post.blog_entry %></p>
+        <div class="post-content">
+          <p><%= @post.blog_entry %></p>
+          <% if !@post.attachment.url.nil? %>
+            <p><%= image_tag @post.attachment.url, class: "post-attachment" %></p>
+          <% end %>
+        </div>
       </div>
       <div class="panel-footer post-footer">
         <%= link_to 'Edit', edit_post_path(@post), type: 'button', class: 'btn btn-warning' %>

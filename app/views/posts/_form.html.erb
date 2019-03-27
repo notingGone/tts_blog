@@ -3,7 +3,7 @@
     <div class="panel panel-info">
 
       <div class="panel-heading">
-        <div class="post-title">New Post</div>
+        <div class="post-title">Post</div>
       </div>
 
       <div class="panel-body">
@@ -32,6 +32,11 @@
           <div class="form-group">
             <%= form.label :blog_entry %><br>
             <%= form.text_area :blog_entry %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :upload_an_image_with_your_post %><br>
+            <%= form.file_field :attachment %>
           </div>
       </div>
 
