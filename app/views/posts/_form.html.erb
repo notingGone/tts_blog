@@ -6,8 +6,8 @@
         <div class="post-title">Post</div>
       </div>
 
-      <div class="panel-body">
-        <%= form_with(model: post, local: true) do |form| %>
+      <%= form_with(model: post, local: true) do |form| %>
+        <div class="panel-body">
           <% if post.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -38,14 +38,14 @@
             <%= form.label :upload_an_image_with_your_post %><br>
             <%= form.file_field :attachment %>
           </div>
-      </div>
-
-      <div class="panel-footer">
-        <div class="actions">
-          <%= form.submit "Submit", class: "btn btn-primary" %>
         </div>
-        <% end %>
-      </div>
+
+        <div class="panel-footer">
+          <div class="actions">
+            <%= form.submit "Submit", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
