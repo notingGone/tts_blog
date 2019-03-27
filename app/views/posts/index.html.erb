@@ -19,11 +19,14 @@
               <%= image_tag post.user.avatar.url, class: "avatar" %>
             <% end %>
             <div class="post-author">
-              By: <%= post.user.username %>
+              By: <%= link_to post.user.username, user_posts_path(name: post.user.username), class: "username-link" %>
             </div>
             <div class="post-content">
-              <%= post.blog_entry %>
+              <%= post.blog_entry.html_safe %>
             </div>
+            <% if !post.attachment.url.nil? %>
+              <p><%= image_tag post.attachment.url, class: "img-responsive post-attachment" %></p>
+            <% end %>
           </div>
           <div class="panel-footer post-footer">
             <div class="btn-group" role="group">
@@ -47,3 +50,4 @@
 <br>
 
 <%= link_to 'New Post', new_post_path, class: "btn btn-nav btn-success" %>
+<%= paginate @posts %>

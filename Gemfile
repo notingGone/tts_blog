@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'gravatarify', '~> 3.0.0'
 gem 'carrierwave', '~> 1.0'
+gem 'kaminari'
 
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 gem 'puma', '~> 3.11'

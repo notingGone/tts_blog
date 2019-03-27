@@ -22,3 +22,11 @@ make navbar BETTER
 make footer
 
 tidy up posts#new
+
+style attachments (SMALLER)
+
+validate inputs
+
+posts#user_posts needs "USER NOT FOUND" catcher
+
+finish implimenting pagination

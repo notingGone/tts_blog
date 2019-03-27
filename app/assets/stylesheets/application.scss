@@ -22,7 +22,6 @@ body {
 
 .post-panel-body {
   overflow: scroll;
-  text-overflow: ellipsis;
   word-wrap: break-word;
   height: 300px;
 }
@@ -44,6 +43,11 @@ body {
   border-color: blue;
   height: 45px;
   display: inline;
+}
+
+a.username-link:link,
+a.username-link:visited {
+  color: cadet-blue;
 }
 
 .avatar-mini {
@@ -80,9 +84,13 @@ body {
   display: block;
 }
 
-.post-panel-body {
-
+.user-posts-well {
+  word-wrap: break-word;
 }
+
+// .post-attachment {
+//
+// }
 
 .mini-header {
   display: block;
@@ -118,7 +126,6 @@ body {
 
 a:link, a:visited {
   color: white;
-
 }
 
 .btn-nav {

@@ -13,9 +13,9 @@
         <% end %>
         By <%= @post.user.username %></p><br>
         <div class="post-content">
-          <p><%= @post.blog_entry %></p>
+          <p><%= @post.blog_entry.html_safe %></p>
           <% if !@post.attachment.url.nil? %>
-            <p><%= image_tag @post.attachment.url, class: "post-attachment" %></p>
+            <p><%= image_tag @post.attachment.url, class: "img-responsive post-attachment" %></p>
           <% end %>
         </div>
       </div>
@@ -42,13 +42,13 @@
             <% else %>
               <%= image_tag 'default-avatar.jpg', class: "avatar-mini" %>
             <% end %>
-            <strong><%= comment.user.username %></strong> commented:<br>
+            <strong><%= link_to comment.user.username, user_posts_path(name: comment.user.username) %></strong> commented:<br>
             <div class="comment"><%= comment.comment_entry %></div>
             <div class="timestamp">
               on <%= comment.created_at.strftime("%F, around %l:%M%P") %>
             </div>
           </li>
-        <% end %>
+          <% end %>
       </ul>
     </div>
   </div>
