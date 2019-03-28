@@ -29,4 +29,13 @@ validate inputs
 
 posts#user_posts needs "USER NOT FOUND" catcher
 
-finish implimenting pagination
+finish implementing pagination
+
+refactor views to use partials for cleaner code
+
+fix author text:
+  is <a>
+  make <a class="author">
+  all <a class="btn ..."> on page need to be
+      <a class="btn ... btn-blog">
+      and style .btn-blog how a:* currently is
